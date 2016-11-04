@@ -28,7 +28,7 @@ ms.Game.solve = solve
 
 
 class Solver(object):
-    """A solver class that returns a cell least likely to contain a mine.
+    """A solver that returns a covered cell least likely to contain a mine.
 
     Step 1: Create a map of rules describing the current state of the board. 
 
@@ -55,7 +55,7 @@ class Solver(object):
         If all cells are covered (as with the first move the game), chose a cell
         randomly.
         """
-        
+
         # only for first move of game
         if self.rules.rule_count <= 1:
             return self._pick_randomly()
