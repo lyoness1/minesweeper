@@ -12,6 +12,7 @@ class Game(object):
         - Place mines
         """
 
+        self.num_mines = num_mines
         self.board = Board(self, width, height)
         self.board.place_mines(num_mines)
 
@@ -187,15 +188,8 @@ class GameWonException(Exception):
 
 
 if __name__ == '__main__':
-    # g_width = int(raw_input("How wide would you like the board to be (0-26)? "))
-    # g_height = int(raw_input("How tall would you like the board to be (0-26)? "))
-    # g_mines = int(raw_input("How many mines would you like there to be? "))
-    # Game(g_width, g_height, g_mines).play()
-    Game(10, 10, 10).play()
-
-
-
-
-
-
+    g_width = int(raw_input("How wide would you like the board to be (0-26)? "))
+    g_height = int(raw_input("How tall would you like the board to be (0-26)? "))
+    g_mines = int(raw_input("How many mines would you like there to be? "))
+    Game(g_width, g_height, g_mines).play()
 
