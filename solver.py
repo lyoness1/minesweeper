@@ -163,7 +163,7 @@ class RuleMap(object):
         rule_id = next(self.rule_id)
         self.rules.add(Rule(num_mines, self.all_covered_cells, rule_id))
 
-        # Update class attributes
+        # Update instance attributes
         self.rule_count = len(self.rules)
         self.num_covered = len(self.all_covered_cells)
 
